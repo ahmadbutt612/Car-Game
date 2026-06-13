@@ -1,19 +1,20 @@
 # Car-Game
 
-Car-Game is a car racing and obstacle avoidance game developed in Assembly Language for the Intel 8088 architecture. The project demonstrates low-level game development concepts using direct hardware interaction, keyboard input handling, graphics rendering, collision detection, and score management.
+Car-Game is a car racing and obstacle avoidance game developed in Assembly Language for the Intel 8088 architecture. The project demonstrates low-level game development concepts including graphics rendering, keyboard input handling, collision detection, score tracking, and game loop implementation.
 
 ## Overview
 
-The game begins with a start screen displaying basic information and instructions. The player can start the game by pressing the **Space** key. During gameplay, the objective is to control the player's car, avoid incoming traffic, and collect bonus coins to increase the score. The game becomes progressively challenging as the player continues to survive and score points.
+The game begins with a start screen displaying basic information and instructions. The player can start the game by pressing the **Space** key. During gameplay, the objective is to control the player's car, avoid incoming traffic, and collect bonus coins to increase the score.
 
-When the player's car collides with an obstacle vehicle, the game ends and a game over screen is displayed. The player is then given the option to restart and play again.
+As the game progresses, the player must survive by avoiding collisions with other vehicles while collecting as many coins as possible. When a collision occurs, the game ends and a game over screen is displayed with an option to restart and play again.
 
 ## Features
 
-* Developed entirely in Assembly Language for Intel 8088 architecture
-* Interactive start screen with game information
-* Keyboard-controlled player car
-* Moving obstacle vehicles
+* Developed entirely in Assembly Language
+* Designed for Intel 8088 architecture
+* Interactive start screen
+* Player-controlled car movement
+* Incoming obstacle vehicles
 * Collectible bonus coins
 * Real-time score tracking
 * Collision detection system
@@ -22,29 +23,60 @@ When the player's car collides with an obstacle vehicle, the game ends and a gam
 
 ## Controls
 
-| Key        | Action                            |
-| ---------- | --------------------------------- |
-| Space      | Start the game                    |
-| Arrow Keys | Move the car                      |
-| R          | Restart the game (when game ends) |
+| Key        | Action                           |
+| ---------- | -------------------------------- |
+| Space      | Start the game                   |
+| Arrow Keys | Move the car                     |
+| R          | Restart the game after Game Over |
+
+## Requirements
+
+* DOSBox
+* NASM (Netwide Assembler)
+
+## Running the Game
+
+### Compile and Run
+
+1. Open DOSBox and mount the project directory:
+
+```dos
+mount c path\to\Car-Game
+c:
+```
+
+2. Assemble the source code:
+
+```dos
+nasm -f bin CarGame.asm -o CarGame.com -l CarGame.lst
+```
+
+3. Run the game:
+
+```dos
+CarGame.com
+```
+
+> Replace the filenames with the actual names used in your project if they are different.
 
 ## Learning Objectives
 
-This project was created to explore:
+This project was created to explore and practice:
 
 * Assembly Language programming
 * Intel 8088 architecture
-* Graphics programming at a low level
-* Keyboard interrupt handling
-* Game loop implementation
+* Low-level graphics programming
+* Keyboard input handling
 * Collision detection techniques
-* Memory and hardware management
+* Game loop design
+* Memory and hardware interaction
 
 ## Technologies Used
 
 * Assembly Language
 * Intel 8088 Architecture
-* DOS Environment / Emulator
+* NASM
+* DOSBox
 
 ## Author
 
